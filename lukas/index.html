@@ -6,7 +6,7 @@
   <body>
     <!-- <{tag} {attribut}>{content}</{tag}> -->
     <h1>📅Ferien-Countdown📅</h1>
-    <p>2 Wochen, 1 Tag, 8 Stunden, 32 Minuten, 45 Sekunden</p>
+    <p id="FerienCounter">2 Wochen, 1 Tag, 8 Stunden, 32 Minuten, 45 Sekunden</p>
     <h3>bis zu den Osterferien!📅 </h3>
     <br>
     <table border="5px">
@@ -61,5 +61,13 @@
       </tbody>
     </table>
     <a href="https://github.com/lgh-ag/lghag.de">Unser Github</a>
+    <script>
+      function getSecounds() {
+        document.getElementById("FerienCounter").innerText = new Date().getSeconds();
+        setTimeout(getSecounds, 1000);
+      }
+
+      setTimeout(getSecounds(), 1000);
+    </script>
   </body>
 </html>  
