@@ -6,7 +6,7 @@
   <body>
     <!-- <{tag} {attribut}>{content}</{tag}> -->
     <h1>Der Countdown zu den nächsten Ferien!</h1>
-    <p>3 Wochen, 3 Tage, 8 Stunden, 30 minuten, 23 Sekunden</p>
+    <p id="FCountdown">3 Wochen, 3 Tage, 8 Stunden, 30 minuten, 23 Sekunden</p>
     <h3>bis zu den Osterferien! 🤑</h3>
     <br>
     <br>
@@ -66,5 +66,13 @@
     <br>
     <br>
     <a href="https://github.com/lgh-ag/lghag.de">🧠 Der Source-Code 🧠</a>
+    <script>
+      function getSecounds() {
+      document.getElementById("FCountdown").innerText = new Date().getSeconds();
+      setTimeout(getSecounds, 1000);
+      }
+
+      getSecounds();
+    </script>
   </body>
 </html>  

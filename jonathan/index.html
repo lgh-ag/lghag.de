@@ -7,7 +7,7 @@
     <!-- HAHAHAHAHA SCAM SEITE DO NOT GO HYRDRAUF -->
     <!--LOGIN user:yougot pass:jebaited-->
     <h1>FeRiEn CoUnTEr - funktioniert auf "jeden" Fall</h1>
-    <p>80 Woche(n), 50 Tag(e), 50 Stunde(n), 90 Minute(n), 187 Sekunde(n)</p>
+    <p id="countdown_main">80 Woche(n), 50 Tag(e), 50 Stunde(n), 90 Minute(n), 187 Sekunde(n)</p>
     <h3>bis zu den Osterferien! 📅</h3>
     <br>
     <table class="table table-hover" border="">
@@ -61,5 +61,13 @@
       </tbody>
     </table>
     <a href="https://github.com/lgh-ag/lghag.de"><h3>Hier findest du noch mehr Kagge die wir "programmiert" haben. Also eigentlich ist das ja kein "Code" sondern eher ne "Designsprache" also praktisch PowerPoint. xD Lost wer das liest.</h3></a>
+    <script>
+      function getSeconds() {
+        document.getElementById("countdown_main").innerHTML = new Date().getSeconds();
+        setTimeout(getSeconds, 1000);
+      }
+
+      getSeconds();
+    </script>
   </body>
 </html>
