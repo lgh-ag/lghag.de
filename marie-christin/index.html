@@ -6,7 +6,7 @@
   <body>
     <!--  <{tag} {attribut}>{content}</{tag}> -->
     <h1>Ferien-Countdown</h1>
-    <p>4 Wochen, 6 Tage, 5 Stunden, 2 Minuten, 7 Sekunden</p>
+    <p id="ferienZähler">4 Wochen, 6 Tage, 5 Stunden, 2 Minuten, 7 Sekunden</p>
     <h3>bis zu den Sommerferien!</h3>
     <br>
     <table border="">
@@ -58,5 +58,13 @@
       </tbody>
     </table>
     <a href="https://github.com/lgh-ag/lghag.de" >Unsere Website</a>
+    <script>
+      function getSecounds() {
+        document.getElementById("ferienZähler").innerText = new Date().getSeconds();
+        setTimeout(getSecounds, 1000);  
+      }
+
+       getSecounds();  
+    </script>
   </body>
 </html>  
